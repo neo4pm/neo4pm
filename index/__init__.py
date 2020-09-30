@@ -1,0 +1,1 @@
+from neo4pm.index.index_manager import *
