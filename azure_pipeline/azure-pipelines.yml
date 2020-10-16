@@ -15,8 +15,8 @@ steps:
     inputs:
       versionSpec: '3.7'
       
-  - bash: ls .
-    displayName: 'list'
+  - bash: echo $(Build.Repository.Name)
+    displayName: 'repo name'
     
   - bash: echo "##vso[task.setvariable variable=version]$(python ./azure_pipeline/helper/version.py $(Build.Repository.Name) $(autoVersionIncrement) $(newVersion))"
     displayName: 'Setting the new version'
