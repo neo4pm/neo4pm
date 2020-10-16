@@ -11,7 +11,6 @@ def versions(pkg_name):
     return sorted(releases, key=parse_version, reverse=True)    
 
 if __name__ == '__main__':
-    # print(*versions(sys.argv[1]), sep='\n')
     libraryname = sys.argv[1]
     autoIncrementVersion = sys.argv[2]
     specifiedVersion = sys.argv[3]
