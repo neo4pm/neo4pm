@@ -14,8 +14,8 @@ steps:
   - task: UsePythonVersion@0
     inputs:
       versionSpec: '3.7'
-
-  - bash: echo "##vso[task.setvariable variable=version]$(python ./azure_pipeline/helper/version.py $(Build.Repository.Name) $(autoVersionIncrement) $(newVersion))"
+    
+  - bash: echo "##vso[task.setvariable variable=version]$(python ./azure_pipeline/helper/version.py $(Build.DefinitionName) $(autoVersionIncrement) $(newVersion))"
     displayName: 'Setting the new version'
 
   - task: qetza.replacetokens.replacetokens-task.replacetokens@3
@@ -38,5 +38,5 @@ steps:
     displayName: 'Authenticate pypi service connection'
 
   - bash: |
-      python -m twine upload -r $(Build.Repository.Name) --config-file $(PYPIRC_PATH) $(whlFile)
+      python -m twine upload -r $(Build.DefinitionName) --config-file $(PYPIRC_PATH) $(whlFile)
     displayName: 'Upload the package'

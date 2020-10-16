@@ -1,9 +1,9 @@
 import setuptools
 
 setuptools.setup(
-    name="#{Build.Repository.Name}#",
+    name="#{Build.DefinitionName}#",
     version="#{version}#", 
-    description="Python #{Build.Repository.Name}# Package",
+    description="Python #{Build.DefinitionName}# Package",
     packages=setuptools.find_packages('src'),
     package_dir={'':'src'},
     install_requires=[
