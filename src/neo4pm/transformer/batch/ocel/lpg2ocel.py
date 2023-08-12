@@ -24,8 +24,8 @@ mdpm_batch_export_rel_end_label = '_end'
 mdpm_batch_export_rel_type_label = '_type'
 mdpm_batch_export_labels_label = '_labels'
 
-class transform:
-    def to_ocel(source_file, destination_folder, export_format='jsonocel'):
+class lpg2ocel:
+    def apply(source_file, destination_folder, export_format='jsonocel'):
         import pandas as pd
         import numpy as np
         import pm4py
