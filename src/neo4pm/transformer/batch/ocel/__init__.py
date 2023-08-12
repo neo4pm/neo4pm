@@ -1,1 +1,1 @@
-from neo4pm.transformer.batch.ocel.transform import *
+from neo4pm.transformer.batch.ocel.lpg2ocel import *
