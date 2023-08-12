@@ -6,7 +6,7 @@ pool:
 
 variables: 
   - name: 'autoVersionIncrement'
-    value: False
+    value: True
   - name: 'newVersion'
     value: '1.0.0'
 
